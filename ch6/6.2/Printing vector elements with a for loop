@@ -5,6 +5,8 @@ Write a for loop to print all NUM_VALS elements of vector courseGrades, followin
 7 9 11 10 
 10 11 9 7 
 
+ch6/6.2/6-2-3.png
+
 */
 
 #include <iostream>

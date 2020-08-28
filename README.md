@@ -1,2 +1,1 @@
-# c++
-C867: Scripting & Programming study note
+# C867: Scripting & Programming (c++) study note

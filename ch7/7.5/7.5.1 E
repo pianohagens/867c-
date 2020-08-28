@@ -1,5 +1,11 @@
 /*
 7.5.1: Function example: Determining fees given an item selling price for an auction website.
+*********Note*****
+1. Two statements will execute. The first statement, feeTotal = BASE_LIST_FEE; always executes. Then exactly one branch will be taken executing a feeTotal = feeTotal + ... 
+2. feeTotal is first set to 0.50. Next, the first branch executes (i.e. sellPrice <= 50.00), which adds (0 * 0.13 = 0) to feeTotal.
+3. feeTotal is first set to 0.50. Next, the second branch executes (i.e. sellPrice <= 1000.00), which adds ((50 * 0.13) + ((100 - 50) * 0.05) = 6.5 + 2.5 = 9) to feeTotal.
+*
+
 Print
 Enter item selling price (Ex: 65.00): 9.95
 eBay fee: $1.7935

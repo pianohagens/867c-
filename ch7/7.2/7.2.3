@@ -1,0 +1,22 @@
+/*
+7.2.3: Function call with parameter: Printing formatted measurement.
+Define a function PrintFeetInchShort, with int parameters numFeet and numInches, that prints using ' and " shorthand. 
+Ex: PrintFeetInchShort(5, 8) prints:
+
+5' 8"
+
+Hint: Use \" to print a double quote.
+*/
+#include <iostream>
+using namespace std;
+
+/* Your solution goes here  */
+int PrintFeetInchShort(int ft, int ih){
+cout << ft <<"' " << ih << '"';
+}
+int main() {
+   PrintFeetInchShort(5, 8);
+   cout << endl;
+
+   return 0;
+}

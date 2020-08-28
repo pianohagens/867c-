@@ -1,3 +1,24 @@
 /*
 7.1.1: Basic function call.
+
+Complete the function definition to print five asterisks ***** when called once (do NOT print a newline). 
+Output for sample program:
+
+**********
 */
+#include <iostream>
+using namespace std;
+
+void PrintPattern() {
+
+   /* Your solution goes here  */
+   char astrisChar = '*';
+   cout << astrisChar << astrisChar << astrisChar << astrisChar<< astrisChar;
+}
+
+int main() {
+   PrintPattern();
+   PrintPattern();
+   cout << endl;
+   return 0;
+}

@@ -1,0 +1,47 @@
+/*
+7.4.3: Function call from multiple locations in main.
+Enter first value: 2
+Enter second value: 7
+Total: 9
+...
+Enter first value: -1
+Enter second value: 3
+Total: 4
+...
+Enter first value: -2
+Enter second value: -6
+Total: 8
+*/
+#include <iostream>
+using namespace std;
+// Program calculates X = | Y | + | Z |
+
+// Function returns the absolute value
+int AbsValueConv(int origValue) {
+   int absValue = 0;   // Resulting abs val
+   
+   if(origValue < 0){  // origVal is neg
+      absValue = -1 * origValue;
+   }
+   else{               // origVal is pos
+      absValue = origValue;
+   }   
+   return absValue;
+}
+int main() {
+   int userValue1 = 0; // First user value
+   int userValue2 = 0; // Second user value
+   int sumValue = 0;   // Resulting value
+   
+   // Prompt user for inputs
+   cout << "Enter first value: ";
+   cin >> userValue1;
+
+   cout << "Enter second value: ";
+   cin >> userValue2;
+
+   sumValue = AbsValueConv(userValue1) + AbsValueConv(userValue2);
+   cout << "Total: " << sumValue << endl;
+   
+   return 0;
+}

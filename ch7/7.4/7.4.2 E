@@ -1,0 +1,81 @@
+/*
+7.4.2: Function stub used in incremental program development.
+Print
+Enter lumber height (in):30.6
+Enter lumber length (in):10
+Enter lumber width (in):2
+Enter lumber type (0: Cherry, 1: Maple, 2: Walnut):0
+## FIXME: finish board foot calc
+Cost of Lumber = $0
+
+*/
+
+#include <iostream>
+using namespace std;
+
+// Program calculates price of lumber. Hardwoods are sold
+// by the board foot (measure of volume, 12"x12"x1"). 
+
+// Function determines board foot based on lumber dimensions
+double CalcBoardFoot(double boardHeight, double boardLength,
+                     double boardThickness) {
+   
+   // board foot = (h * l * t)/144
+   cout << "FIXME: finish board foot calc" << endl;
+   
+   return 0;
+}
+
+// Function calculates price based on lumber type and quantity
+double CalcLumberPrice(int lumberType, double boardFoot) {
+   const double CHERRY_COST_BF = 6.75;  // Price of cherry per board foot
+   const double MAPLE_COST_BF = 10.75;  // Price of maple per board foot
+   const double WALNUT_COST_BF = 13.00; // Price of walnut per board foot
+   double lumberCost = 0.0;             // Total lumber cost
+   
+   // Determine cost of lumber based on type
+   switch (lumberType) {
+      case 0:
+         lumberCost = CHERRY_COST_BF;
+         break;
+      case 1:
+         lumberCost = MAPLE_COST_BF;
+         break;
+      case 2:
+         lumberCost = WALNUT_COST_BF;
+         break;
+      default:
+         lumberCost = -1.0;
+         break;
+   }
+   
+   lumberCost = lumberCost * boardFoot;
+   return lumberCost;
+}
+
+int main() {
+   double heightDim = 0.0;  // Board height
+   double lengthDim = 0.0;  // Board length
+   double thickDim = 0.0;   // Board thickness
+   int boardType = 0;       // Type of lumber
+   double boardFoot = 0.0;  // Volume of lumber
+   
+   // Prompt user for input
+   cout << "Enter lumber height (in):";
+   cin >> heightDim;
+   
+   cout << "Enter lumber length (in):";
+   cin >> lengthDim;
+   
+   cout << "Enter lumber width (in):";
+   cin >> thickDim;
+   
+   cout << "Enter lumber type (0: Cherry, 1: Maple, 2: Walnut):";
+   cin >> boardType;
+   
+   // Call functions to calculate lumber cost
+   boardFoot = CalcBoardFoot(heightDim, lengthDim,thickDim);
+   cout << "Cost of Lumber = $" << CalcLumberPrice(boardType, boardFoot) << endl;
+   
+   return 0;
+}

@@ -1,0 +1,34 @@
+/*
+7.1.3: Adding to the face printing program.
+Run the following program, observe the face output. Modify main() to print that same face twice.
+Complete the function definition of PrintFaceB() to print a different face of your choice, and then call that function from main() also.
+Output look:
+
+  o o
+   o
+  ooo
+
+*/
+
+#include <iostream>
+using namespace std;
+
+void PrintFaceB() {
+   // FIXME: FINISH
+   return;
+}
+
+void PrintFaceA() {
+   char faceChar = 'o';
+
+   cout << "  "  << faceChar << " " << faceChar << endl;         // Eyes
+   cout << "   " << faceChar << endl;                            // Nose
+   cout << "  "  << faceChar << faceChar << faceChar << endl;    // Mouth
+
+   return;
+}
+
+int main() {
+   PrintFaceA();
+   return 0;
+}

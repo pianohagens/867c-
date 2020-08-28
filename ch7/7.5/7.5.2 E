@@ -6,7 +6,9 @@ Enter a positive number (>0):
 Enter value for second input
 Enter a positive number (>0): 
 7
-Least common multiple of 13 and 7 is 91
+Note:
+FindLCM() calls FindGCD().
+main() calls GetPositiveNumber() twice, then calls FindLCM(), which itself calls FindGCD(), giving a total of 4 function calls.
 */
 #include <iostream>
 #include <cmath>

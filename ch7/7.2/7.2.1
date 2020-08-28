@@ -1,3 +1,24 @@
 /*
 7.2.1: Function parameters.
+Print
+Price: $20
 */
+
+
+#include <iostream>
+using namespace std;
+
+void printPrice(int price) {
+   cout << "Price: $" << price;
+   
+   return;
+}
+
+int main() {
+   int productPrice = 17;
+   int taxAmount = 3;
+   
+   printPrice(productPrice + taxAmount);
+
+   return 0;
+}

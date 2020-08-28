@@ -1,0 +1,41 @@
+/*
+7.2.2: Function call with parameter: Print tic-tac-toe board.
+Complete the PrintTicTacToe function with char parameters horizChar and vertChar that 
+prints a tic-tac-toe board with the characters as follows. 
+End with newline. Ex: PrintTicTacToe('~', '!') prints:
+
+x!x!x
+~~~~~
+x!x!x
+~~~~~
+x!x!x
+
+*/
+#include <iostream>
+using namespace std;
+
+void PrintTicTacToe(char horizChar, char vertChar) {
+
+   /* Your solution goes here  */
+   for(int i=1;i<4;i++){ 
+      for(int h=1;h<4;h++){ 
+         cout << "x";
+            if(h<3){
+               cout << vertChar;
+         }
+      }
+      cout << endl;
+   if(i!=3){
+      for(int h=1;h<6;h++){ 
+         cout << horizChar;
+         }cout << endl;
+      }            
+    }
+   return;
+}
+
+int main() {
+   PrintTicTacToe('~', '!');
+
+   return 0;
+}
